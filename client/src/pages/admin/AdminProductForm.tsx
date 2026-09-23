@@ -85,7 +85,7 @@ export function AdminProductForm({
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <TextField label="Name" value={values.name} onChange={(v) => set('name', v)} required />
         <TextField
-          label="Price ($)"
+          label="Price (Rs.)"
           type="number"
           value={String(values.price)}
           onChange={(v) => set('price', Number(v))}

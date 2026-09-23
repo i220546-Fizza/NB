@@ -5,6 +5,7 @@ import { orderService } from '@/services/orderService';
 import { Reveal } from '@/components/animations/Reveal';
 import { SectionLabel } from '@/components/ui/GoldLine';
 import type { ShippingAddress } from '@/types';
+import { formatCurrency } from '@/utils/currency';
 
 const EMPTY_ADDRESS: ShippingAddress = {
   fullName: '',
@@ -119,22 +120,22 @@ export default function Checkout() {
                     <span className="text-beige/70">
                       {product.name} <span className="text-beige/40">× {quantity}</span>
                     </span>
-                    <span className="text-ivory">${(product.price * quantity).toFixed(0)}</span>
+                    <span className="text-ivory">{formatCurrency(product.price * quantity)}</span>
                   </li>
                 ))}
               </ul>
               <div className="mt-6 space-y-2 border-t border-cocoa/50 pt-4 text-sm text-beige/70">
                 <div className="flex justify-between">
                   <span>Subtotal</span>
-                  <span className="text-ivory">${subtotal.toFixed(0)}</span>
+                  <span className="text-ivory">{formatCurrency(subtotal)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Shipping</span>
-                  <span className="text-ivory">{shipping === 0 ? 'Complimentary' : `$${shipping}`}</span>
+                  <span className="text-ivory">{shipping === 0 ? 'Free' : formatCurrency(shipping)}</span>
                 </div>
                 <div className="flex justify-between border-t border-cocoa/50 pt-3 font-display text-lg text-ivory">
                   <span>Total</span>
-                  <span className="text-champagne">${total.toFixed(0)}</span>
+                  <span className="text-champagne">{formatCurrency(total)}</span>
                 </div>
               </div>
             </div>

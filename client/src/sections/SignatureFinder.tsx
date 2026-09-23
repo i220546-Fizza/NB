@@ -6,6 +6,7 @@ import { SectionLabel } from '@/components/ui/GoldLine';
 import { productService } from '@/services/productService';
 import { moodRecommendations } from '@/data/products';
 import type { Mood, Product } from '@/types';
+import { formatCurrency } from '@/utils/currency';
 
 const MOODS: { key: Mood; label: string }[] = [
   { key: 'mysterious', label: 'Mysterious' },
@@ -101,7 +102,7 @@ export function SignatureFinder() {
                   <img src={result.image} alt={result.name} className="my-6 h-40 object-contain" />
                   <h3 className="font-display text-2xl text-ivory">{result.name}</h3>
                   <p className="mt-2 max-w-xs font-serif text-beige/60">{result.description}</p>
-                  <span className="mt-4 font-serif text-xl text-champagne">${result.price}</span>
+                  <span className="mt-4 font-serif text-xl text-champagne">{formatCurrency(result.price)}</span>
                   <Link to={`/product/${result.slug}`} className="btn-luxury mt-8">
                     Discover {result.name}
                   </Link>

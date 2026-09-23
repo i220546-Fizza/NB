@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { productService } from '@/services/productService';
 import type { Product } from '@/types';
 import { CloseIcon, SearchIcon } from '@/components/ui/Icons';
+import { formatCurrency } from '@/utils/currency';
 
 export function SearchOverlay({ open, onClose }: { open: boolean; onClose: () => void }) {
   const [query, setQuery] = useState('');
@@ -84,7 +85,7 @@ export function SearchOverlay({ open, onClose }: { open: boolean; onClose: () =>
                         </p>
                       </div>
                     </div>
-                    <span className="font-serif text-champagne">${product.price}</span>
+                    <span className="font-serif text-champagne">{formatCurrency(product.price)}</span>
                   </Link>
                 </motion.div>
               ))}

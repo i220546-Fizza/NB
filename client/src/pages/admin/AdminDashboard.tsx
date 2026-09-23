@@ -4,6 +4,7 @@ import { AnimatedCounter } from '@/components/animations/AnimatedCounter';
 import { productService } from '@/services/productService';
 import { orderService } from '@/services/orderService';
 import type { Order, Product } from '@/types';
+import { formatCurrency } from '@/utils/currency';
 
 export default function AdminDashboard() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -29,7 +30,7 @@ export default function AdminDashboard() {
       <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <StatCard label="Products" value={products.length} />
         <StatCard label="Orders" value={orders.length} />
-        <StatCard label="Revenue" value={Math.round(revenue)} prefix="$" />
+        <StatCard label="Revenue" value={Math.round(revenue)} prefix="Rs. " />
         <StatCard label="Bestsellers" value={products.filter((p) => p.bestseller).length} />
       </div>
 
@@ -69,7 +70,7 @@ export default function AdminDashboard() {
                   <tr key={o._id} className="border-b border-cocoa/30">
                     <td className="px-4 py-3 text-champagne">#{o._id.slice(-6).toUpperCase()}</td>
                     <td className="px-4 py-3 text-beige/70">{o.shippingAddress.fullName}</td>
-                    <td className="px-4 py-3 text-ivory">${o.totalAmount.toFixed(0)}</td>
+                    <td className="px-4 py-3 text-ivory">{formatCurrency(o.totalAmount)}</td>
                     <td className="px-4 py-3 capitalize text-beige/60">{o.orderStatus}</td>
                   </tr>
                 ))

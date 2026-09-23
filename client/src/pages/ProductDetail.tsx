@@ -7,6 +7,7 @@ import { GoldLine } from '@/components/ui/GoldLine';
 import { productService } from '@/services/productService';
 import { useCart } from '@/context/CartContext';
 import type { Product } from '@/types';
+import { formatCurrency } from '@/utils/currency';
 
 export default function ProductDetail() {
   const { slug } = useParams();
@@ -87,7 +88,7 @@ export default function ProductDetail() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <p className="mt-6 font-serif text-2xl text-champagne">${product.price}</p>
+            <p className="mt-6 font-serif text-2xl text-champagne">{formatCurrency(product.price)}</p>
           </Reveal>
 
           <Reveal delay={0.25}>

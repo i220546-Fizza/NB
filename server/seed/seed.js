@@ -8,7 +8,7 @@ const products = [
     name: 'Noir Élégance',
     description:
       'A velvet-dark eau de parfum built around smoked amber and black vanilla — the scent of candlelight in an empty ballroom.',
-    price: 185,
+    price: 18500,
     category: 'oriental',
     gender: 'unisex',
     image: '/images/products/noir-elegance.svg',
@@ -26,7 +26,7 @@ const products = [
     name: 'Champagne Silk',
     description:
       'Sparkling bergamot and white peony wrapped in warm musk — an ode to golden hour and quiet confidence.',
-    price: 165,
+    price: 15500,
     category: 'floral',
     gender: 'her',
     image: '/images/products/champagne-silk.svg',
@@ -44,7 +44,7 @@ const products = [
     name: 'Obsidian Oud',
     description:
       'A commanding blend of oud, leather and dark spice — for those who enter a room before they speak.',
-    price: 220,
+    price: 22500,
     category: 'woody',
     gender: 'him',
     image: '/images/products/obsidian-oud.svg',
@@ -61,7 +61,7 @@ const products = [
   {
     name: 'Ivory Bloom',
     description: 'Delicate tuberose and creamy sandalwood — soft, luminous, and impossible to forget.',
-    price: 175,
+    price: 16500,
     category: 'floral',
     gender: 'her',
     image: '/images/products/ivory-bloom.svg',
@@ -78,7 +78,7 @@ const products = [
   {
     name: 'Golden Hour',
     description: 'Amber resin, tonka bean and a whisper of citrus — the last light of the day, bottled.',
-    price: 195,
+    price: 19500,
     category: 'amber',
     gender: 'unisex',
     image: '/images/products/golden-hour.svg',
@@ -95,7 +95,7 @@ const products = [
   {
     name: 'First Light',
     description: 'Crisp citrus, sea salt and driftwood — the clarity of dawn over water.',
-    price: 150,
+    price: 12500,
     category: 'fresh',
     gender: 'him',
     image: '/images/products/first-light.svg',
@@ -112,7 +112,7 @@ const products = [
   {
     name: 'Rouge Intense',
     description: 'A bold, sensual signature of red fruits, spice and dark musk — impossible to ignore.',
-    price: 210,
+    price: 21500,
     category: 'signature',
     gender: 'her',
     image: '/images/products/rouge-intense.svg',
@@ -129,7 +129,7 @@ const products = [
   {
     name: 'Velvet Vetiver',
     description: 'Earthy vetiver and smoked cedar softened with iris — quiet power in a bottle.',
-    price: 200,
+    price: 20000,
     category: 'woody',
     gender: 'unisex',
     image: '/images/products/velvet-vetiver.svg',

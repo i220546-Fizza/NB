@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { productService } from '@/services/productService';
 import type { Product } from '@/types';
 import { AdminProductForm, type ProductFormValues } from './AdminProductForm';
+import { formatCurrency } from '@/utils/currency';
 
 export default function AdminProducts() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -124,7 +125,7 @@ export default function AdminProducts() {
                     <span className="text-ivory">{p.name}</span>
                   </td>
                   <td className="px-4 py-3 capitalize text-beige/60">{p.category}</td>
-                  <td className="px-4 py-3 text-champagne">${p.price}</td>
+                  <td className="px-4 py-3 text-champagne">{formatCurrency(p.price)}</td>
                   <td className="px-4 py-3 text-beige/60">{p.stock}</td>
                   <td className="px-4 py-3 text-xs text-beige/50">
                     {p.bestseller && <span className="mr-2">Bestseller</span>}

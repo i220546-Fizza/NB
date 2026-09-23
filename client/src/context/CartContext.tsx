@@ -9,8 +9,8 @@ import {
 import type { CartItem, Product } from '@/types';
 
 const STORAGE_KEY = 'nb_cart';
-const SHIPPING_FLAT_RATE = 12;
-const FREE_SHIPPING_THRESHOLD = 200;
+const SHIPPING_FLAT_RATE = 200;
+const FREE_SHIPPING_THRESHOLD = 10000;
 
 interface CartContextValue {
   items: CartItem[];

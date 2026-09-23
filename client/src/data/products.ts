@@ -10,7 +10,7 @@ export const fallbackProducts: Product[] = [
     slug: 'noir-elegance',
     description:
       'A velvet-dark eau de parfum built around smoked amber and black vanilla — the scent of candlelight in an empty ballroom.',
-    price: 185,
+    price: 18500,
     category: 'oriental',
     gender: 'unisex',
     image: '/images/products/noir-elegance.svg',
@@ -31,7 +31,7 @@ export const fallbackProducts: Product[] = [
     slug: 'champagne-silk',
     description:
       'Sparkling bergamot and white peony wrapped in warm musk — an ode to golden hour and quiet confidence.',
-    price: 165,
+    price: 15500,
     category: 'floral',
     gender: 'her',
     image: '/images/products/champagne-silk.svg',
@@ -52,7 +52,7 @@ export const fallbackProducts: Product[] = [
     slug: 'obsidian-oud',
     description:
       'A commanding blend of oud, leather and dark spice — for those who enter a room before they speak.',
-    price: 220,
+    price: 22500,
     category: 'woody',
     gender: 'him',
     image: '/images/products/obsidian-oud.svg',
@@ -73,7 +73,7 @@ export const fallbackProducts: Product[] = [
     slug: 'ivory-bloom',
     description:
       'Delicate tuberose and creamy sandalwood — soft, luminous, and impossible to forget.',
-    price: 175,
+    price: 16500,
     category: 'floral',
     gender: 'her',
     image: '/images/products/ivory-bloom.svg',
@@ -94,7 +94,7 @@ export const fallbackProducts: Product[] = [
     slug: 'golden-hour',
     description:
       'Amber resin, tonka bean and a whisper of citrus — the last light of the day, bottled.',
-    price: 195,
+    price: 19500,
     category: 'amber',
     gender: 'unisex',
     image: '/images/products/golden-hour.svg',
@@ -115,7 +115,7 @@ export const fallbackProducts: Product[] = [
     slug: 'first-light',
     description:
       'Crisp citrus, sea salt and driftwood — the clarity of dawn over water.',
-    price: 150,
+    price: 12500,
     category: 'fresh',
     gender: 'him',
     image: '/images/products/first-light.svg',
@@ -136,7 +136,7 @@ export const fallbackProducts: Product[] = [
     slug: 'rouge-intense',
     description:
       'A bold, sensual signature of red fruits, spice and dark musk — impossible to ignore.',
-    price: 210,
+    price: 21500,
     category: 'signature',
     gender: 'her',
     image: '/images/products/rouge-intense.svg',
@@ -157,7 +157,7 @@ export const fallbackProducts: Product[] = [
     slug: 'velvet-vetiver',
     description:
       'Earthy vetiver and smoked cedar softened with iris — quiet power in a bottle.',
-    price: 200,
+    price: 20000,
     category: 'woody',
     gender: 'unisex',
     image: '/images/products/velvet-vetiver.svg',

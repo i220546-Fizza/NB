@@ -3,6 +3,7 @@ import { useState } from 'react';
 import type { Product } from '@/types';
 import { useCart } from '@/context/CartContext';
 import { GoldLine } from '@/components/ui/GoldLine';
+import { formatCurrency } from '@/utils/currency';
 
 export function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
   const [hovered, setHovered] = useState(false);
@@ -55,7 +56,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
         <p className="line-clamp-2 font-serif text-sm text-beige/60">{product.description}</p>
 
         <div className="mt-2 flex w-full items-center justify-between">
-          <span className="font-serif text-lg text-champagne">${product.price}</span>
+          <span className="font-serif text-lg text-champagne">{formatCurrency(product.price)}</span>
           <div className="flex items-center gap-4">
             <Link to={`/product/${product.slug}`} className="btn-ghost">
               View

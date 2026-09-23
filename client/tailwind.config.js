@@ -12,6 +12,8 @@ export default {
         cocoa: '#3A2C25',
         obsidian: '#0D0B0A',
         beige: '#E8DED0',
+        navy: '#0F1B2E',
+        'navy-light': '#1B2E48',
       },
       fontFamily: {
         display: ['"Playfair Display"', 'serif'],

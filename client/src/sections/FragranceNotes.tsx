@@ -24,7 +24,7 @@ const LAYERS = [
 
 export function FragranceNotes() {
   return (
-    <section className="section-pad relative bg-espresso py-28 md:py-36">
+    <section className="section-pad relative bg-navy py-28 md:py-36">
       <Reveal>
         <SectionLabel>Composition</SectionLabel>
       </Reveal>
@@ -51,7 +51,7 @@ export function FragranceNotes() {
                 {layer.ingredients.map((ing) => (
                   <li
                     key={ing}
-                    className="border-b border-cocoa/50 pb-2 font-serif text-beige/70 transition-colors group-hover:text-ivory"
+                    className="border-b border-navy-light pb-2 font-serif text-beige/70 transition-colors group-hover:text-ivory"
                   >
                     {ing}
                   </li>

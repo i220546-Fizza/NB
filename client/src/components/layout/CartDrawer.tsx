@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useCart } from '@/context/CartContext';
 import { CloseIcon, MinusIcon, PlusIcon, TrashIcon } from '@/components/ui/Icons';
+import { formatCurrency } from '@/utils/currency';
 
 export function CartDrawer() {
   const { items, isOpen, closeCart, increment, decrement, removeItem, subtotal, shipping, total } =
@@ -88,7 +89,7 @@ export function CartDrawer() {
                             </button>
                           </div>
                           <span className="font-serif text-champagne">
-                            ${(product.price * quantity).toFixed(0)}
+                            {formatCurrency(product.price * quantity)}
                           </span>
                         </div>
                       </div>
@@ -103,15 +104,15 @@ export function CartDrawer() {
                 <div className="space-y-2 text-sm text-beige/70">
                   <div className="flex justify-between">
                     <span>Subtotal</span>
-                    <span className="text-ivory">${subtotal.toFixed(0)}</span>
+                    <span className="text-ivory">{formatCurrency(subtotal)}</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Shipping</span>
-                    <span className="text-ivory">{shipping === 0 ? 'Complimentary' : `$${shipping}`}</span>
+                    <span className="text-ivory">{shipping === 0 ? 'Free' : formatCurrency(shipping)}</span>
                   </div>
                   <div className="flex justify-between border-t border-cocoa/50 pt-3 font-display text-lg text-ivory">
                     <span>Total</span>
-                    <span className="text-champagne">${total.toFixed(0)}</span>
+                    <span className="text-champagne">{formatCurrency(total)}</span>
                   </div>
                 </div>
                 <Link

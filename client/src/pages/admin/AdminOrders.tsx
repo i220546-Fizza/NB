@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { orderService } from '@/services/orderService';
 import type { Order } from '@/types';
+import { formatCurrency } from '@/utils/currency';
 
 const STATUSES: Order['orderStatus'][] = ['processing', 'shipped', 'delivered', 'cancelled'];
 
@@ -75,7 +76,7 @@ export default function AdminOrders() {
                       </div>
                     ))}
                   </td>
-                  <td className="px-4 py-3 text-ivory">${o.totalAmount.toFixed(0)}</td>
+                  <td className="px-4 py-3 text-ivory">{formatCurrency(o.totalAmount)}</td>
                   <td className="px-4 py-3 capitalize text-beige/60">{o.paymentStatus} · COD</td>
                   <td className="px-4 py-3">
                     <select
