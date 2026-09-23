@@ -1,0 +1,15 @@
+{
+  "name": "nb-classic-scents",
+  "private": true,
+  "version": "1.0.0",
+  "description": "NB Classic Scents — a luxury perfume e-commerce experience.",
+  "scripts": {
+    "client:install": "npm install --prefix client",
+    "server:install": "npm install --prefix server",
+    "install:all": "npm run client:install && npm run server:install",
+    "client:dev": "npm run dev --prefix client",
+    "server:dev": "npm run dev --prefix server",
+    "client:build": "npm run build --prefix client",
+    "server:seed": "npm run seed --prefix server"
+  }
+}
