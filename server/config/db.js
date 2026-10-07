@@ -1,5 +1,13 @@
 import mongoose from 'mongoose';
 
+// Hard-pin this app to its own database, regardless of what database name
+// (if any) is embedded in MONGO_URI. This is what actually keeps this app's
+// data isolated from other apps that might share the same MongoDB cluster -
+// a cluster is just a server; two apps pointed at the same cluster but
+// different dbName values still have completely separate collections, with
+// no possibility of cross-reads even if someone pastes the wrong URI.
+const DB_NAME = 'nb_classic_scents';
+
 export async function connectDB() {
   const uri = process.env.MONGO_URI;
   if (!uri) {
@@ -8,7 +16,7 @@ export async function connectDB() {
   }
 
   try {
-    await mongoose.connect(uri);
+    await mongoose.connect(uri, { dbName: DB_NAME });
     console.log('MongoDB connected');
   } catch (err) {
     console.error('MongoDB connection error:', err.message);
